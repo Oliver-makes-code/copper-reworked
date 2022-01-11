@@ -1,30 +1,25 @@
 {
   "schemaVersion": 1,
-  "id": "mod_id",
+  "id": "copper_reworked",
   "version": "${version}",
-  "name": "Mod Name",
-  "description": "Mod Description",
+  "name": "Copper Reworked",
+  "description": "A mod based off of SimplySarc's copper ideas",
   "authors": [
-    "Author"
+    "Oliver"
   ],
-  "contact": {
-    "homepage": "https://example.com/",
-    "issues": "https://example.com/",
-    "sources": "https://example.com/"
-  },
-  "license": "GNU Lesser General Public License version 3 (LGPLv3)",
+  "license": "LGPL3",
   "icon": "assets/mod_name/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
       {
         "adapter": "kotlin",
-        "value": "com.mod_author.mod_id.ModName"
+        "value": "olivermakesco.de.copper.CopperReworkedKt::init"
       }
     ]
   },
   "mixins": [
-    "mod_id.mixins.json"
+    "copper_reworked.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.12.12",

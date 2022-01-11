@@ -1,2 +1,2 @@
-# Example Mod
-This is an example mod for Kotlin.
+# Copper Reworked
+A mod based off of SimplySarc's copper ideas
