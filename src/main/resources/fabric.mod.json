@@ -8,7 +8,6 @@
     "Oliver"
   ],
   "license": "LGPL3",
-  "icon": "assets/mod_name/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -27,5 +26,6 @@
     "fabric-language-kotlin": ">=1.7.1+kotlin.1.6.10",
     "minecraft": "1.18.x",
     "java": ">=17"
-  }
+  },
+  "accessWidener": "copper_reworked.accesswidener"
 }

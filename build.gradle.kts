@@ -49,4 +49,7 @@ tasks {
         targetCompatibility = javaVersion
         withSourcesJar()
     }
+    loom {
+        accessWidenerPath.set(file("src/main/resources/copper_reworked.accesswidener"))
+    }
 }
