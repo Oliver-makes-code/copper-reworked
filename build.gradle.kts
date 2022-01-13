@@ -50,6 +50,6 @@ tasks {
         withSourcesJar()
     }
     loom {
-        //accessWidenerPath.set(file("src/main/resources/copper_reworked.accesswidener"))
+        accessWidenerPath.set(file("src/main/resources/copper_reworked.accesswidener"))
     }
 }

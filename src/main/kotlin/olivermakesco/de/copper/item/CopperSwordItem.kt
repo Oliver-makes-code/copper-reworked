@@ -1,12 +1,15 @@
 package olivermakesco.de.copper.item
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.entity.LivingEntity
+import net.minecraft.item.ItemGroup
 import net.minecraft.item.ItemStack
 import net.minecraft.item.SwordItem
 import kotlin.random.Random
 
-class CopperItem(settings: Settings) : SwordItem(CopperToolMaterial(), 3, -2.4f, settings), OxidizableItem {
-    var random = Random((Math.random() * 100).toLong())
+val copperSword = CopperSwordItem(FabricItemSettings().maxCount(1).group(ItemGroup.COMBAT))
+
+class CopperSwordItem(settings: Settings) : SwordItem(CopperToolMaterial(), 3, -2.4f, settings), OxidizableItem {
 
     override fun addOxidization(stack: ItemStack, amount: Int) {
         val nbt = stack.orCreateNbt
@@ -26,9 +29,8 @@ class CopperItem(settings: Settings) : SwordItem(CopperToolMaterial(), 3, -2.4f,
     }
 
     override fun postHit(stack: ItemStack?, target: LivingEntity?, attacker: LivingEntity?): Boolean {
-        if (random.nextLong(0,10) >= 7.5)
-            stack?.let { addOxidization(it, 1) }
-
+        if (stack != null)
+            addOxidization(stack, 1)
         return true
     }
 
